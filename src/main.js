@@ -1,28 +1,27 @@
-// Jim Whitehead
-// Created: 4/25/2024
-// Phaser: 3.70.0
-//
-// Bullet Time
-//
-// Multiple examples of how to implement bullet firing logic using Phaser
-// 
-// Art assets from Kenny Assets:
-// https://kenney.nl/assets/
+// Phaser final project
+// Escape Earth
+// Fullscreen responsive config
 
-// debug with extreme prejudice
-"use strict"
+"use strict";
 
-// game config
 let config = {
-    parent: 'phaser-game',
-    type: Phaser.CANVAS,
-    render: {
-        pixelArt: true  // prevent pixel art from getting blurred when scaled
-    },
-    width: 800,
-    height: 600,
-    scene: [ArrayBoom]
-}
+    parent: "phaser-game",
+    type: Phaser.AUTO,
 
+    scale: {
+        mode: Phaser.Scale.RESIZE,
+        autoCenter: Phaser.Scale.CENTER_BOTH,
+        width: window.innerWidth,
+        height: window.innerHeight
+    },
+
+    render: {
+        pixelArt: true
+    },
+
+    backgroundColor: "#000000",
+
+    scene: [EscapeEarth]
+};
 
 const game = new Phaser.Game(config);
