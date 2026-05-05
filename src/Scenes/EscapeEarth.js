@@ -192,6 +192,12 @@ class EscapeEarth extends Phaser.Scene {
         if (this.spaceship && this.spaceship.destroy) {
             this.spaceship.destroy();
         }
+
+        this.heartIcons = [];
+        this.scoreText = null;
+        this.levelText = null;
+        this.highScoreText = null;
+        this.healthLabel = null;
     }
 
     showTitleScreen() {
