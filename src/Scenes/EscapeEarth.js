@@ -176,6 +176,8 @@ class EscapeEarth extends Phaser.Scene {
 
             for (let obj of list) {
                 if (obj && obj.destroy) {
+                    if (obj.healthText && obj.healthText.destroy) {
+                        obj.healthText.destroy(); }
                     obj.destroy();
                 }
             }
@@ -193,11 +195,7 @@ class EscapeEarth extends Phaser.Scene {
             this.spaceship.destroy();
         }
 
-        this.heartIcons = [];
-        this.scoreText = null;
-        this.levelText = null;
-        this.highScoreText = null;
-        this.healthLabel = null;
+  
     }
 
     showTitleScreen() {
