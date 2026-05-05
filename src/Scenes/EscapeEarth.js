@@ -13,41 +13,33 @@ class EscapeEarth extends Phaser.Scene {
     preload() {
         this.load.setPath("./assets/");
 
-        // Platformer character atlas.
-        // These frame names do NOT include .png in the XML.
         this.load.atlasXML(
             "AlienAssets",
             "spritesheet-characters-default.png",
             "spritesheet-characters-default.xml"
         );
 
-        // Enemy atlas.
-        // These frame names also do NOT include .png.
+      
         this.load.atlasXML(
             "EnemyAssets",
             "spritesheet-enemies-default.png",
             "spritesheet-enemies-default.xml"
         );
 
-        // Jumper atlas.
-        // These frame names DO include .png, like cloud.png and lighting_yellow.png.
+       
         this.load.atlasXML(
             "JumperAssets",
             "spritesheet_jumper.png",
             "spritesheet_jumper.xml"
         );
 
-        // UI / tile atlas.
-        // The heart frame is named heart, not heart.png.
+       
         this.load.atlasXML(
             "TileAssets",
             "spritesheet-tiles-default.png",
             "spritesheet-tiles-default.xml"
         );
 
-        // Space shooter atlas.
-        // This contains spaceStation_###.png, spaceMissiles_###.png,
-        // spaceParts_###.png, and spaceEffects_###.png.
         this.load.atlasXML(
             "SpaceShooterAssets",
             "spaceShooter2_spritesheet.png",
@@ -759,9 +751,7 @@ class EscapeEarth extends Phaser.Scene {
                 speed = 320;
             }
 
-            // Simple downward bullet.
-            // vx = 0 means it does not move left/right.
-            // vy = speed means it moves downward.
+           
             this.createEnemyShot(
                 enemy.x,
                 enemy.y + 25,
